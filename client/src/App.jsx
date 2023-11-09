@@ -13,17 +13,17 @@ import Home from './pages/home.page';
 
 function App() {
   return (
-    // <ProverbProvider>
-    <Router>
-      <GlobalStyle />
-      <Header />
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-      </Routes>
-      <Footer />
-    </Router>
-    // </ProverbProvider>
+    <ProverbProvider>
+      <Router>
+        <GlobalStyle />
+        <Header />
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </ProverbProvider>
   );
 }
 

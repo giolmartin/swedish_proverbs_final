@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
+import axios from 'axios';
 
 const ProverbContext = createContext({
   proverbs: [],
@@ -9,16 +10,22 @@ export const useProverbContext = () => useContext(ProverbContext);
 
 export const ProverbProvider = ({ children }) => {
   const [proverbs, setProverbs] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        //Finish fetch logic
-        const response = await fetch();
-        const data = await response.json();
-        setProverbs(data);
+        //Fetching data from my API
+        //Using axios for simplification of process of fetching data
+        const response = await axios.get(
+          'https://giolmartin.github.io/svenska-ordsprak-API/data/svenska-ordsprak.json'
+        );
+        setProverbs(response.data);
       } catch (error) {
-        console.log('Failed to fetch', error);
+        setError(error.message);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -28,6 +35,8 @@ export const ProverbProvider = ({ children }) => {
     <ProverbContext.Provider
       value={{
         proverbs,
+        isLoading,
+        error,
       }}
     >
       {children}
