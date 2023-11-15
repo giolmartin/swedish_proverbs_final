@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { CardContainer, Proverb, Translation } from './card.style';
+import {
+  CardContainer,
+  CardInside,
+  CardBack,
+  CardFront,
+  Proverb,
+  Translation,
+} from './card.style';
 
-const Card = ({ proverb, translation }) => (
-  <CardContainer>
-    <Proverb>{proverb}</Proverb>
-    <Translation>{translation}</Translation>
-  </CardContainer>
-);
+const Card = ({ proverb, translation }) => {
+  const [isFlipped, setFlipped] = useState(false);
+
+  const handleFlip = () => {
+    setFlipped(!isFlipped);
+  };
+  console.log(proverb, translation);
+
+  return (
+    <CardContainer onClick={handleFlip}>
+      <CardInside isFlipped={isFlipped}>
+        <CardFront>{proverb}</CardFront>
+        <CardBack> {translation}</CardBack>
+      </CardInside>
+    </CardContainer>
+  );
+};
 
 export default Card;
