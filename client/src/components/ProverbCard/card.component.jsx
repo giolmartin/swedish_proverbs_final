@@ -9,7 +9,7 @@ import {
   Translation,
 } from './card.style';
 
-const Card = ({ proverb, translation }) => {
+function RandomCard({ proverb, translation }) {
   const [isFlipped, setFlipped] = useState(false);
 
   const handleFlip = () => {
@@ -25,6 +25,6 @@ const Card = ({ proverb, translation }) => {
       </CardInside>
     </CardContainer>
   );
-};
+}
 
-export default Card;
+export default RandomCard;

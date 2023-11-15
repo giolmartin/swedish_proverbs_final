@@ -4,8 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ProverbProvider } from './context/proverb.context';
 
 import { GlobalStyle } from './global.styles';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+
 import Header from './components/Header/header.component';
 import Footer from './components/Footer/footer.component';
 import Navbar from './components/Navbar/navbar.component';
