@@ -17,6 +17,8 @@ function RandomCard({ proverb, translation }) {
   };
   console.log(proverb, translation);
 
+  if (!proverb || !translation) return <h1>Loading...</h1>;
+  
   return (
     <CardContainer onClick={handleFlip}>
       <CardInside isFlipped={isFlipped}>

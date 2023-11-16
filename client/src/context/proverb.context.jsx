@@ -4,12 +4,16 @@ import axios from 'axios';
 const ProverbContext = createContext({
   proverbs: [],
   setProverbs: () => {},
+  randomProverb: {},
+  setRandomProverb: () => {},
+  getRandomProverb: () => {},
 });
 
 export const useProverbContext = () => useContext(ProverbContext);
 
 export const ProverbProvider = ({ children }) => {
   const [proverbs, setProverbs] = useState([]);
+  const [randomProverb, setRandomProverb] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -22,18 +26,28 @@ export const ProverbProvider = ({ children }) => {
           'https://giolmartin.github.io/svenska-ordsprak-API/data/svenska-ordsprak.json'
         );
         setProverbs(response.data);
+        setRandomProverb(
+          response.data[Math.floor(Math.random() * response.data.length)]
+        );
       } catch (error) {
         setError(error.message);
       } finally {
         setIsLoading(false);
       }
     };
-
     fetchData();
   }, []);
+
+  const getRandomProverb = () => {
+    const i = Math.floor(Math.random() * proverbs.length);
+    setRandomProverb(proverbs[i]);
+  };
+
   return (
     <ProverbContext.Provider
       value={{
+        randomProverb,
+        getRandomProverb,
         proverbs,
         isLoading,
         error,
