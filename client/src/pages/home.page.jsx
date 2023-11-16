@@ -3,14 +3,13 @@ import { useProverbContext } from '../context/proverb.context';
 import RandomCard from '../components/ProverbCard/card.component';
 
 const Home = () => {
-  const { proverbs, randomProverb, getRandomProverb, isLoading, error } =
+  const { randomProverb, getRandomProverb, isLoading, error } =
     useProverbContext();
   console.log('Home');
 
   if (isLoading) return <h1>Loading...</h1>;
   if (error) return <h1>{error}</h1>;
 
-  // console.log(proverbs);
   console.log(randomProverb);
 
   return (

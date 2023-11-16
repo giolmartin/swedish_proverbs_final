@@ -10,6 +10,7 @@ import Footer from './components/Footer/footer.component';
 import Navbar from './components/Navbar/navbar.component';
 
 import Home from './pages/home.page';
+import ProverbPage from './pages/proverbs.page';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/proverbs' element={<ProverbPage />} />
         </Routes>
         <Footer />
       </Router>
