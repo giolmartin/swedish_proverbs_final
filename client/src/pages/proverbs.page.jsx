@@ -13,16 +13,16 @@ const ProverbPage = () => {
   const [lastIndex, setLastIndex] = React.useState(0);
   const [hasMore, setHasMore] = React.useState(true);
 
-    //Number of items per load
-    const itemsPerPage = 20; 
-    
-    //Pagination for the infinite scroll
+  //Number of items per load
+  const itemsPerPage = 20;
+
+  //Pagination for the infinite scroll
   useEffect(() => {
     setCurrentProverbs(proverbs.slice(0, itemsPerPage));
     setLastIndex(itemsPerPage);
   }, [proverbs]);
 
-    //Function to load more proverbs from the filtered proverbs
+  //Function to load more proverbs from the filtered proverbs
   const loadMoreProverbs = () => {
     const nextProverbs = filteredProverbs.slice(
       lastIndex,
@@ -35,9 +35,8 @@ const ProverbPage = () => {
       setHasMore(false);
     }
   };
-    
-    
-    //Filtering the proverbs based on the search term from the input
+
+  //Filtering the proverbs based on the search term from the input
   useEffect(() => {
     const filtered = searchTerm
       ? proverbs.filter((proverb) =>
@@ -52,7 +51,7 @@ const ProverbPage = () => {
   }, [searchTerm, proverbs]);
 
   if (isLoading) return <h1>Loading...</h1>;
-  if (error) return <h1>{error}</h1>;
+  if (error) return <h1>{error} Please try again later</h1>;
 
   return (
     <div>
@@ -63,20 +62,28 @@ const ProverbPage = () => {
         placeholder='Search proverbs...'
       />
 
-          {/* https://www.npmjs.com/package/react-infinite-scroll-component  */}
-      <InfiniteScroll
-        dataLength={currentProverbs.length}
-        next={loadMoreProverbs}
-        hasMore={hasMore}
-      >
-        {currentProverbs.map((proverb) => (
-          <ListCard
-            key={proverb.id}
-            proverb={proverb.text}
-            translation={proverb['translation-EN']}
-          />
-        ))}
-      </InfiniteScroll>
+      {/* https://www.npmjs.com/package/react-infinite-scroll-component 
+            Also implemented conditional rendering for when there are no proverbs found
+            TODO: Add styling 
+       */}
+      {currentProverbs.length > 0 ? (
+        <InfiniteScroll
+          dataLength={currentProverbs.length}
+          next={loadMoreProverbs}
+          hasMore={hasMore}
+          loader={<h4>Loading...</h4>}
+        >
+          {currentProverbs.map((proverb) => (
+            <ListCard
+              key={proverb.id}
+              proverb={proverb.text}
+              translation={proverb['translation-EN']}
+            />
+          ))}
+        </InfiniteScroll>
+      ) : (
+        <h2>No proverbs found</h2>
+      )}
     </div>
   );
 };

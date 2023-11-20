@@ -1,14 +1,18 @@
 import React from 'react';
 import { useProverbContext } from '../context/proverb.context';
 import RandomCard from '../components/ProverbCard/card.component';
+import { ErrorMessage, LoadingMessage } from '../global.styles';
 
 const Home = () => {
   const { randomProverb, getRandomProverb, isLoading, error } =
     useProverbContext();
   console.log('Home');
 
-  if (isLoading) return <h1>Loading...</h1>;
-  if (error) return <h1>{error}</h1>;
+  if (isLoading) return <LoadingMessage>Loading...</LoadingMessage>;
+  if (error)
+    return <ErrorMessage>{error}: Please try again later.</ErrorMessage>;
+  if (!randomProverb)
+    return <ErrorMessage>Please try again later.</ErrorMessage>;
 
   console.log(randomProverb);
 

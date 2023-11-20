@@ -2,7 +2,7 @@ import React from 'react';
 
 import { CardContainer, ProverbText, TranslationText } from './listCard.style';
 
-const ListCard = ({ proverb, translation }) => {
+const ListCard = ({ proverb = '', translation = '' }) => {
   return (
     <CardContainer>
       <ProverbText>{proverb}</ProverbText>

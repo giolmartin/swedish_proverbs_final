@@ -11,6 +11,7 @@ import Navbar from './components/Navbar/navbar.component';
 
 import Home from './pages/home.page';
 import ProverbPage from './pages/proverbs.page';
+import AboutPage from './pages/about.page';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/proverbs' element={<ProverbPage />} />
+          <Route path='/about' element={<AboutPage />} />
         </Routes>
         <Footer />
       </Router>

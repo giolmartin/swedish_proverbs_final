@@ -1,13 +1,6 @@
 import React, { useState } from 'react';
 
-import {
-  CardContainer,
-  CardInside,
-  CardBack,
-  CardFront,
-  Proverb,
-  Translation,
-} from './card.style';
+import { CardContainer, CardInside, CardBack, CardFront } from './card.style';
 
 function RandomCard({ proverb, translation }) {
   const [isFlipped, setFlipped] = useState(false);
@@ -18,7 +11,7 @@ function RandomCard({ proverb, translation }) {
   console.log(proverb, translation);
 
   if (!proverb || !translation) return <h1>Loading...</h1>;
-  
+
   return (
     <CardContainer onClick={handleFlip}>
       <CardInside isFlipped={isFlipped}>

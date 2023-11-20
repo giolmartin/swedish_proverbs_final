@@ -4,7 +4,7 @@ import { FooterContainer, FooterText } from './footer.style';
 
 const Footer = () => (
   <FooterContainer>
-    <FooterText>Swedish Phrases</FooterText>
+    <FooterText>Svenska Ordspråk</FooterText>
   </FooterContainer>
 );
 

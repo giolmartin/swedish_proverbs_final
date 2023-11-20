@@ -11,6 +11,7 @@ export const Nav = styled.nav`
 `;
 
 export const StyledLink = styled(Link)`
+  font-family: 'Lato', sans-serif;
   padding: 10px;
   margin-right: 10px;
   color: #333;
