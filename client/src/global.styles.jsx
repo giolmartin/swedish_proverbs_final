@@ -34,6 +34,7 @@ export const color = {
   background: '#eaeaea',
   accent: '#ffffff',
   text: '#36454f',
+  hover: '#3678af',
 };
 
 export const Color_ClassicSwedish = {

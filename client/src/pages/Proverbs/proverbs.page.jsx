@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import { useProverbContext } from '../context/proverb.context';
+import { useProverbContext } from '../../context/proverb.context';
 
 import InfiniteScroll from 'react-infinite-scroll-component';
-import ListCard from '../components/ListCard/listCard.component';
+import ListCard from '../../components/ListCard/listCard.component';
 
 const ProverbPage = () => {
   const { proverbs, isLoading, error } = useProverbContext();

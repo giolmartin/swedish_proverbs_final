@@ -9,9 +9,9 @@ import Header from './components/Header/header.component';
 import Footer from './components/Footer/footer.component';
 import Navbar from './components/Navbar/navbar.component';
 
-import Home from './pages/home.page';
-import ProverbPage from './pages/proverbs.page';
-import AboutPage from './pages/about.page';
+import Home from './pages/Home/home.page';
+import ProverbPage from './pages/Proverbs/proverbs.page';
+import AboutPage from './pages/About/about.page';
 
 function App() {
   return (
