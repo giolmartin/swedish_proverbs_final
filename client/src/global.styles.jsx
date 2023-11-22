@@ -9,6 +9,16 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
+export const color = {
+  primary: '#4a6fa5',
+  secondary: '#ffdb58',
+  background: '#eaeaea',
+  accent: '#ffffff',
+  text: '#36454f',
+  hover: '#3678af',
+  secondary_text: '#6A8CAF',
+};
+
 export const AccentText = styled.p`
   font-family: 'Merriweather', sans-serif;
 `;
@@ -28,14 +38,13 @@ export const LoadingMessage = styled(Message)`
   color: #4a6fa5;
 `;
 
-export const color = {
-  primary: '#4a6fa5',
-  secondary: '#ffdb58',
-  background: '#eaeaea',
-  accent: '#ffffff',
-  text: '#36454f',
-  hover: '#3678af',
-};
+export const OtherMessage = styled.h2`
+  font-size: 1.5em;
+  margin: 20px 0;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  color: ${color.primary};
+`;
 
 export const Color_ClassicSwedish = {
   primary: '#005cbf',
@@ -67,4 +76,8 @@ export const Color_UrbanSwedish = {
   third: '#95a5a6',
   fourth: '#2c3e50',
   fifth: '#ecf0f1',
+  six: '#8D8D8D', 
+  seventh: '#55868C', 
+  eigth: '#A28497', 
+  ninth: '#789D8C', 
 };

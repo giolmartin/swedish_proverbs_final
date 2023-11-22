@@ -4,6 +4,9 @@ import { useProverbContext } from '../../context/proverb.context';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import ListCard from '../../components/ListCard/listCard.component';
 
+import { ProverbsContainer, SearchInput } from './proverbs.style';
+import { OtherMessage } from '../../global.styles';
+
 const ProverbPage = () => {
   const { proverbs, isLoading, error } = useProverbContext();
 
@@ -54,8 +57,8 @@ const ProverbPage = () => {
   if (error) return <h1>{error} Please try again later</h1>;
 
   return (
-    <div>
-      <input
+    <ProverbsContainer>
+      <SearchInput
         type='text'
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
@@ -82,9 +85,9 @@ const ProverbPage = () => {
           ))}
         </InfiniteScroll>
       ) : (
-        <h2>No proverbs found</h2>
+        <OtherMessage>No proverbs found</OtherMessage>
       )}
-    </div>
+    </ProverbsContainer>
   );
 };
 
