@@ -6,7 +6,6 @@ import { ProverbProvider } from './context/proverb.context';
 import { GlobalStyle } from './global.styles';
 
 import Header from './components/Header/header.component';
-import Footer from './components/Footer/footer.component';
 import Navbar from './components/Navbar/navbar.component';
 
 import Home from './pages/Home/home.page';
@@ -25,7 +24,6 @@ function App() {
           <Route path='/proverbs' element={<ProverbPage />} />
           <Route path='/about' element={<AboutPage />} />
         </Routes>
-        <Footer />
       </Router>
     </ProverbProvider>
   );
