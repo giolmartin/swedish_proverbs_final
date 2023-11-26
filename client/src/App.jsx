@@ -15,7 +15,7 @@ import AboutPage from './pages/About/about.page';
 function App() {
   return (
     <ProverbProvider>
-      <Router>
+      <Router basename='/swedish_proverbs_final'>
         <GlobalStyle />
         <Header />
         <Navbar />
