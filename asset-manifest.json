@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/swedish_proverbs_final/static/js/main.0a37413d.js",
+    "main.js": "/swedish_proverbs_final/static/js/main.dcdb494f.js",
     "index.html": "/swedish_proverbs_final/index.html",
-    "main.0a37413d.js.map": "/swedish_proverbs_final/static/js/main.0a37413d.js.map"
+    "main.dcdb494f.js.map": "/swedish_proverbs_final/static/js/main.dcdb494f.js.map"
   },
   "entrypoints": [
-    "static/js/main.0a37413d.js"
+    "static/js/main.dcdb494f.js"
   ]
 }
