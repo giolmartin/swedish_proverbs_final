@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { color } from '../../global.styles';
+
 export const ProverbsContainer = styled.div`
   display: flex;
   flex-direction: column;
