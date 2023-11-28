@@ -5,11 +5,12 @@ export const ProverbsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  max-width: 800px;
+  max-width: 70vw;
   margin: auto;
 
   @media (max-width: 768px) {
     padding: 10px;
+    max-width: 90vw;
   }
 `;
 
