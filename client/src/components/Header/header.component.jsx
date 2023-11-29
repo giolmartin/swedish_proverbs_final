@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-
 import {
   HeaderContainer,
   HeaderTitle,
@@ -29,6 +28,7 @@ const Header = () => {
         </StyledLink>
       </MobileNavLinks>
       <HeaderTitle>Svenska Sayings</HeaderTitle>
+      <div width={'24px'}></div>
     </HeaderContainer>
   );
 };

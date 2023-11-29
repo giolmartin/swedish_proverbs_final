@@ -5,9 +5,9 @@ import { AccentText, color } from '../../global.styles';
 export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
-
+  align-items: center;
   background: #f8f9fa;
-  padding: 10px 0;
+  padding: 10px 20px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
@@ -41,9 +41,10 @@ export const StyledLink = styled(Link)`
 export const HamburgerMenu = styled.div`
   display: none;
   cursor: pointer;
-
+  font-size: 2em;
   @media (max-width: 768px) {
     display: block;
+    font-size: 1.5em;
   }
 `;
 
@@ -79,9 +80,4 @@ export const MobileNavLinks = styled.div`
     transform: ${({ isOpen }) =>
       isOpen ? 'translateX(0)' : 'translateX(100%)'};
   }
-`;
-
-export const ModeToggle = styled.div`
-  cursor: pointer;
-  font-size: 1.5em;
 `;
