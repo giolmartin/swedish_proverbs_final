@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import {
   Nav,
   StyledLink,
-  Hamburger,
-  CloseIcon,
+  HamburgerMenu,
+  CloseIconMenu,
   MobileNavLinks,
 } from './navbar.style';
 
@@ -12,9 +12,9 @@ const Navbar = () => {
 
   return (
     <Nav>
-      <Hamburger onClick={() => setIsOpen(!isOpen)}>☰</Hamburger>
+      <HamburgerMenu onClick={() => setIsOpen(!isOpen)}>☰</HamburgerMenu>
       <MobileNavLinks isOpen={isOpen}>
-        <CloseIcon onClick={() => setIsOpen(false)}>X</CloseIcon>
+        <CloseIconMenu onClick={() => setIsOpen(false)}>X</CloseIconMenu>
         <StyledLink to='/' onClick={() => setIsOpen(false)}>
           Home
         </StyledLink>

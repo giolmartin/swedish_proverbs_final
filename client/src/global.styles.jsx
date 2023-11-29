@@ -19,6 +19,7 @@ export const color = {
   secondary_text: '#6A8CAF',
 };
 
+
 export const AccentText = styled.p`
   font-family: 'Merriweather', sans-serif;
 `;
@@ -76,8 +77,8 @@ export const Color_UrbanSwedish = {
   third: '#95a5a6',
   fourth: '#2c3e50',
   fifth: '#ecf0f1',
-  six: '#8D8D8D', 
-  seventh: '#55868C', 
-  eigth: '#A28497', 
-  ninth: '#789D8C', 
+  six: '#8D8D8D',
+  seventh: '#55868C',
+  eigth: '#A28497',
+  ninth: '#789D8C',
 };

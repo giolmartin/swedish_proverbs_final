@@ -36,7 +36,7 @@ export const StyledLink = styled(Link)`
   }
 `;
 
-export const Hamburger = styled.div`
+export const HamburgerMenu = styled.div`
   display: none;
   cursor: pointer;
 
@@ -45,7 +45,7 @@ export const Hamburger = styled.div`
   }
 `;
 
-export const CloseIcon = styled.div`
+export const CloseIconMenu = styled.div`
   display: none;
   position: absolute;
   top: 10px;

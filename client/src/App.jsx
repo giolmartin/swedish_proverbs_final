@@ -6,7 +6,7 @@ import { ProverbProvider } from './context/proverb.context';
 import { GlobalStyle } from './global.styles';
 
 import Header from './components/Header/header.component';
-import Navbar from './components/Navbar/navbar.component';
+// import Navbar from './components/Navbar/navbar.component';
 
 import Home from './pages/Home/home.page';
 import ProverbPage from './pages/Proverbs/proverbs.page';
@@ -18,7 +18,6 @@ function App() {
       <Router basename='/swedish_proverbs_final'>
         <GlobalStyle />
         <Header />
-        <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/proverbs' element={<ProverbPage />} />
