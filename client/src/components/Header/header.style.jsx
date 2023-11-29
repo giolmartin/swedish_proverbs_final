@@ -39,12 +39,11 @@ export const StyledLink = styled(Link)`
 `;
 
 export const HamburgerMenu = styled.div`
-  display: none;
   cursor: pointer;
   font-size: 2em;
+
   @media (max-width: 768px) {
     display: block;
-    font-size: 1.5em;
   }
 `;
 
@@ -79,5 +78,5 @@ export const MobileNavLinks = styled.div`
     display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
     transform: ${({ isOpen }) =>
       isOpen ? 'translateX(0)' : 'translateX(100%)'};
-  }
+  
 `;
